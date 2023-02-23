@@ -1,0 +1,52 @@
+.control,
+.indicators {
+  display: flex;
+  align-items: center;
+}
+
+.control {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  border-radius: 25px;
+}
+
+.button {
+  padding: 0.5em;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+}
+
+.button svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.indicators {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.indicator {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: opacity, scale 200ms ease-in-out;
+}
+.indicator:not(:last-child) {
+  margin-right: 1em;
+}
+
+.indicator.current {
+  scale: 1.4;
+  opacity: 1;
+}
