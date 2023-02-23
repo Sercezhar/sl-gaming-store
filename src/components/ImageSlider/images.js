@@ -9,15 +9,15 @@ const images = [
   },
   {
     url: 'src/assets/images/wo-long-fallen-dynasty.jpg',
-    alt: 'god-of-war-ragnarok',
+    alt: 'wo-long-fallen-dynasty',
   },
   {
     url: 'src/assets/images/resident-evil-4-remake.jpg',
-    alt: 'god-of-war-ragnarok',
+    alt: 'resident-evil-4-remake',
   },
   {
     url: 'src/assets/images/hollow-knight-silksong.jpg',
-    alt: 'god-of-war-ragnarok',
+    alt: 'hollow-knight-silksong',
   },
 ];
 
