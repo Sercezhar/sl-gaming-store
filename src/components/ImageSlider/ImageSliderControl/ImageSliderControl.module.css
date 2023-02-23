@@ -19,7 +19,6 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  transition: opacity 200ms ease-in-out;
 }
 
 .button svg {
@@ -39,8 +38,8 @@
   height: 6px;
   background-color: #fff;
   border-radius: 50%;
-  opacity: 0.6;
-  transition: opacity, scale 200ms ease-in-out;
+  opacity: 0.4;
+  transition: opacity, scale 250ms cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }
 .indicator:not(:last-child) {
   margin-right: 1em;
