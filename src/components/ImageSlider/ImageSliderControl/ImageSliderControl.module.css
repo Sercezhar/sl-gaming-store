@@ -9,7 +9,7 @@
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #000;
+  background-color: var(--slider-control-bg);
   border-radius: 25px;
 }
 

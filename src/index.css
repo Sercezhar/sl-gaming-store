@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
 @import-normalize;
 
+:root {
+  --accent-color: #f33d3d;
+  --slider-control-bg: #07090d;
+}
+
 *,
 *::before,
 *::after {
@@ -9,8 +14,8 @@
 
 body {
   margin: 0;
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #0e121b;
   font-size: 14px;
   line-height: 1.2;
   font-family: Verdana, sans-serif;
