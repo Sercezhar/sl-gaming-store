@@ -1,0 +1,55 @@
+.dropdown {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  padding: 0.893em 1.6em 0.893em 1em;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.list {
+  position: absolute;
+  top: calc(100% + 0.4em);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  background-color: var(--secondary-color);
+  border-radius: 0.6em;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0.8em;
+  transition: background-color 200ms var(--transition);
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #202731;
+}
+
+.icon {
+  margin-right: 0.4em;
+  border-radius: 50%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 0.3em;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: #62656b;
+  transition: transform 200ms var(--transition);
+}
+
+.arrow.rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}

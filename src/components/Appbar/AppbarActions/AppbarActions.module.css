@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  justify-content: end;
+  min-width: 25%;
+}
+
+.item:not(:last-child) {
+  margin-right: 0.8em;
+}
