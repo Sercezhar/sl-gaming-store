@@ -1,5 +1,4 @@
 import styles from './AppbarActionsUser.module.css';
-
 import { BiUserCircle } from 'react-icons/bi';
 
 function AppbarActionsUser() {

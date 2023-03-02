@@ -1,6 +1,6 @@
+import useClickOutside from '@/hooks/useClickOutside';
 import classNames from 'classnames/bind';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import useClickOutside from '../../../../hooks/useClickOutside';
 import styles from './AppbarActionsDropdown.module.css';
 
 let cx = classNames.bind(styles);

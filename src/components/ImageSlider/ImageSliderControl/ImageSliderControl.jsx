@@ -1,6 +1,6 @@
+import createAnArray from '@/utils/createAnArray';
 import classNames from 'classnames/bind';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import createAnArray from '../../../utils/createAnArray';
 import styles from './ImageSliderControl.module.css';
 
 let cx = classNames.bind(styles);
