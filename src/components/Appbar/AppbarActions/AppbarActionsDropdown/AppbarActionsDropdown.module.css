@@ -8,7 +8,13 @@
   background-color: var(--secondary-color);
   border: none;
   border-radius: 25px;
+  transition: background-color 200ms var(--transition);
   cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #202731;
 }
 
 .list {
@@ -16,7 +22,7 @@
   top: calc(100% + 0.4em);
   left: 50%;
   transform: translateX(-50%);
-  width: 140px;
+  min-width: 140px;
   background-color: var(--secondary-color);
   border-radius: 0.6em;
   overflow: hidden;
@@ -31,11 +37,12 @@
 }
 
 .item:hover {
+  color: #fff;
   background-color: #202731;
 }
 
 .icon {
-  margin-right: 0.4em;
+  margin-right: 1em;
   border-radius: 50%;
 }
 

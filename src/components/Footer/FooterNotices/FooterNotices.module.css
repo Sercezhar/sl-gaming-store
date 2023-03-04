@@ -1,0 +1,19 @@
+.notices {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: var(--footer-bg-color);
+}
+
+.link {
+  color: var(--text-color);
+}
+
+.link:not(:last-child) {
+  margin-right: 3em;
+}
+
+.link:hover {
+  color: var(--primary-color);
+  transition: color 200ms var(--transition);
+}

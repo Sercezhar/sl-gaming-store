@@ -5,7 +5,7 @@ function AppbarActionsCart() {
   return (
     <div>
       <button className={styles.button} type="button">
-        <MdOutlineLocalGroceryStore size={20} />
+        <MdOutlineLocalGroceryStore size={20} color="#fff" />
       </button>
     </div>
   );

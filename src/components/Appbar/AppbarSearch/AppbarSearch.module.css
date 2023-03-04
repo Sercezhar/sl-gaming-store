@@ -8,7 +8,12 @@
   background-color: var(--secondary-color);
   border: none;
   border-radius: 25px;
+  transition: box-shadow 200ms var(--transition);
   outline: none;
+}
+
+.input:focus {
+  box-shadow: var(--searchbar-bs);
 }
 
 .input::placeholder {

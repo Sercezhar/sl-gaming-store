@@ -1,7 +1,7 @@
 .slider {
   position: relative;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 84px;
   width: fit-content;
   background: none;
 }
@@ -12,6 +12,7 @@
   font-weight: 900;
   letter-spacing: -0.015em;
   text-transform: capitalize;
+  color: #fff;
 }
 
 .title::before {

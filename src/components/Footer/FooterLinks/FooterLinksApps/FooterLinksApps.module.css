@@ -1,0 +1,34 @@
+.title {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.list {
+  display: flex;
+}
+
+.item:not(:last-child) {
+  margin-right: 1em;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 1em 2em 1em 1em;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+  transition: 200ms background-color, color, box-shadow var(--transition);
+}
+
+.link:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: var(--primary-bs-hover);
+}
+
+.link svg {
+  margin-right: 1em;
+}

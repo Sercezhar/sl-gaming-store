@@ -4,5 +4,11 @@
   background-color: var(--secondary-color);
   border: none;
   border-radius: 25px;
+  transition: 200ms background-color, color var(--transition);
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  box-shadow: var(--primary-bs-hover);
 }

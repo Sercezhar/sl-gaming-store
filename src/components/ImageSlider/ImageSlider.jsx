@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Divider from '../Divider';
 import images from './images';
 import styles from './ImageSlider.module.css';
 import ImageSliderCarousel from './ImageSliderCarousel';
@@ -29,6 +30,8 @@ const ImageSlider = () => {
 
   return (
     <div className={styles.slider}>
+      <Divider marginBottom="28px" />
+
       <h2 className={styles.title}>New big releases</h2>
 
       <ImageSliderCarousel images={images} currentImage={currentImage} />
