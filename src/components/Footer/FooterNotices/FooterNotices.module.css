@@ -1,8 +1,11 @@
+.wrapper {
+  background-color: var(--footer-bg-color);
+}
+
 .notices {
   display: flex;
   justify-content: space-between;
-  padding: 24px;
-  background-color: var(--footer-bg-color);
+  padding: 24px 0;
 }
 
 .link {
