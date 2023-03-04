@@ -5,7 +5,7 @@ function AppbarActionsUser() {
   return (
     <div>
       <button className={styles.button}>
-        <BiUserCircle size={45} color="#fff" />
+        <BiUserCircle size={48} color="#fff" />
       </button>
     </div>
   );

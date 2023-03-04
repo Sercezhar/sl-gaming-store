@@ -4,7 +4,7 @@
 
 .button {
   display: flex;
-  padding: 0.893em 1.6em 0.893em 1em;
+  padding: 0.875em 1.6em 0.875em 1em;
   background-color: var(--secondary-color);
   border: none;
   border-radius: 25px;
