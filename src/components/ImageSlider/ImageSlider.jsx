@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BsFillPatchExclamationFill } from 'react-icons/bs';
 import Divider from '../Divider';
 import images from './images';
 import styles from './ImageSlider.module.css';
@@ -32,7 +33,12 @@ const ImageSlider = () => {
     <div className={styles.slider}>
       <Divider marginBottom="28px" />
 
-      <h2 className={styles.title}>New big releases</h2>
+      <h2 className={styles.title}>
+        <span>
+          <BsFillPatchExclamationFill size={20} color="var(--primary-color" />
+        </span>
+        New big releases
+      </h2>
 
       <ImageSliderCarousel images={images} currentImage={currentImage} />
 

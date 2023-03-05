@@ -7,6 +7,8 @@
 }
 
 .title {
+  display: flex;
+  align-items: center;
   margin-bottom: 12px;
   font-size: 48px;
   font-weight: 900;
@@ -15,14 +17,15 @@
   color: #fff;
 }
 
-.title::before {
-  content: '';
-  display: inline-block;
-  margin-right: 0.4em;
-  width: 0.6em;
-  height: 2px;
-  background-color: var(--primary-color);
-  vertical-align: middle;
+.title span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.2em;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 .carousel {
