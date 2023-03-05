@@ -17,12 +17,28 @@
   background-color: #202731;
 }
 
+.listWrapper {
+  position: relative;
+}
+
+.listWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0.4em;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--secondary-color);
+}
+
 .list {
   position: absolute;
-  top: calc(100% + 0.4em);
+  top: calc(100% + 0.6em);
   left: 50%;
   transform: translateX(-50%);
-  min-width: 140px;
+  min-width: 150px;
   background-color: var(--secondary-color);
   border-radius: 0.6em;
   overflow: hidden;
@@ -42,7 +58,7 @@
 }
 
 .icon {
-  margin-right: 1em;
+  margin-right: 0.6em;
   border-radius: 50%;
 }
 

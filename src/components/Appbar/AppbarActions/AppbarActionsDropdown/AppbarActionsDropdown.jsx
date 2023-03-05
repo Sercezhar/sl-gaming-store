@@ -40,20 +40,22 @@ function AppbarActionsDropdown({ array, currentState, setCurrentState }) {
       </button>
 
       {isOpen ? (
-        <ul className={styles.list}>
-          {array.map(({ name, icon }, index) => (
-            <li
-              className={styles.item}
-              key={index}
-              onClick={() => handleStateChange(index)}
-            >
-              <svg className={styles.icon} width="20" height="20">
-                <use href={icon} />
-              </svg>
-              {name}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.listWrapper}>
+          <ul className={styles.list}>
+            {array.map(({ name, icon }, index) => (
+              <li
+                className={styles.item}
+                key={index}
+                onClick={() => handleStateChange(index)}
+              >
+                <svg className={styles.icon} width="20" height="20">
+                  <use href={icon} />
+                </svg>
+                {name}
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : null}
     </div>
   );
