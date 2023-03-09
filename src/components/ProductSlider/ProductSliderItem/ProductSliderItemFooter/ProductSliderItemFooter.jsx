@@ -1,7 +1,7 @@
 import { MdOutlineAddShoppingCart } from 'react-icons/md';
-import styles from './BestDealsItemFooter.module.css';
+import styles from './ProductSliderItemFooter.module.css';
 
-function BestDealsItemFooter({ product }) {
+function ProductSliderItemFooter({ product }) {
   return (
     <div className={styles.footer}>
       <h3 className={styles.title}>{product.title}</h3>
@@ -20,4 +20,4 @@ function BestDealsItemFooter({ product }) {
   );
 }
 
-export default BestDealsItemFooter;
+export default ProductSliderItemFooter;

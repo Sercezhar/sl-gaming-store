@@ -3,7 +3,6 @@ import Divider from '../Divider';
 import ProductSlider from '../ProductSlider';
 import SecondaryTitle from '../SecondaryTitle';
 import Section from '../Section';
-import BestDealsItem from './BestDealsItem';
 import products from './products';
 
 function BestDeals() {
@@ -15,11 +14,7 @@ function BestDeals() {
         <IoMdWallet size={20} color="var(--primary-color)" />
       </SecondaryTitle>
 
-      <ProductSlider array={products}>
-        {products.map((product, index) => (
-          <BestDealsItem product={product} key={index} />
-        ))}
-      </ProductSlider>
+      <ProductSlider products={products} />
     </Section>
   );
 }

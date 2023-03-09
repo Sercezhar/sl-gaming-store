@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import styles from './ProductSlider.module.css';
 import ProductSliderControl from './ProductSliderControl';
+import ProductSliderItem from './ProductSliderItem';
 
-function ProductSlider({ children, array }) {
+function ProductSlider({ products }) {
   const [listPosition, setListPosition] = useState(0);
 
   const cardWidth = () => {
-    if (listPosition + 2 === array.length) {
+    if (listPosition + 2 === products.length) {
       return 344;
     }
 
@@ -22,7 +23,7 @@ function ProductSlider({ children, array }) {
   }
 
   function onNext() {
-    if (listPosition + 3 === array.length) {
+    if (listPosition + 3 === products.length) {
       return;
     }
 
@@ -38,7 +39,9 @@ function ProductSlider({ children, array }) {
             transform: `translateX(-${cardWidth() * listPosition}px)`,
           }}
         >
-          {children}
+          {products.map((product, index) => (
+            <ProductSliderItem product={product} key={index} />
+          ))}
         </ul>
       </div>
 

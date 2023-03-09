@@ -1,6 +1,6 @@
-import styles from './BestDealsItemBody.module.css';
+import styles from './ProductSliderItemBody.module.css';
 
-function BestDealsItemBody({ product }) {
+function ProductSliderItemBody({ product }) {
   return (
     <div className={styles.body}>
       <img src={product.image} alt={product.title} />
@@ -21,4 +21,4 @@ function BestDealsItemBody({ product }) {
   );
 }
 
-export default BestDealsItemBody;
+export default ProductSliderItemBody;
