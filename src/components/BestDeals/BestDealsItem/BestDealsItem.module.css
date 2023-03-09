@@ -1,0 +1,9 @@
+.item {
+  max-width: 344px;
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+}
+
+.item:not(:last-child) {
+  margin-right: 2.75em;
+}

@@ -12,7 +12,7 @@
   --footer-bg-color: #181d25;
 
   /* box-shadows */
-  --primary-bs-hover: rgba(247, 59, 59, 0.2) 0px 10px 20px -5px,
+  --primary-bs-hover: rgba(247, 59, 59, 0.2) 0px 6px 20px -5px,
     rgba(247, 59, 59, 0.1) 0px 10px 10px -5px;
   --searchbar-bs: rgba(247, 59, 59, 0.8) 0px 0px 0px 3px;
 

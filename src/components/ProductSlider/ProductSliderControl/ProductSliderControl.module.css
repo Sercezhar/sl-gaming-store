@@ -1,0 +1,28 @@
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4em;
+  height: 4em;
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 250ms var(--transition);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
+.buttonPrev {
+  left: -2em;
+}
+
+.buttonNext {
+  right: -2em;
+}

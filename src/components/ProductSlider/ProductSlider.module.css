@@ -1,0 +1,4 @@
+.list {
+  display: flex;
+  transition: transform 300ms var(--transition);
+}

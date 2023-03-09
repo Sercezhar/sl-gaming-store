@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { BsFillPatchExclamationFill } from 'react-icons/bs';
 import Divider from '../Divider';
+import SecondaryTitle from '../SecondaryTitle';
+import Section from '../Section';
 import images from './images';
-import styles from './ImageSlider.module.css';
 import ImageSliderCarousel from './ImageSliderCarousel';
 import ImageSliderControl from './ImageSliderControl';
 
@@ -30,15 +31,11 @@ const ImageSlider = () => {
   }
 
   return (
-    <div className={styles.slider}>
-      <Divider marginBottom="28px" />
-
-      <h2 className={styles.title}>
-        <span>
-          <BsFillPatchExclamationFill size={20} color="var(--primary-color" />
-        </span>
-        New big releases
-      </h2>
+    <Section>
+      <Divider />
+      <SecondaryTitle text="New big releases">
+        <BsFillPatchExclamationFill size={20} color="var(--primary-color)" />
+      </SecondaryTitle>
 
       <ImageSliderCarousel images={images} currentImage={currentImage} />
 
@@ -48,7 +45,7 @@ const ImageSlider = () => {
         prevImage={prevImage}
         nextImage={nextImage}
       />
-    </div>
+    </Section>
   );
 };
 

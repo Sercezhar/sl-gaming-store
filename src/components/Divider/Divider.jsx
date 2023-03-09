@@ -1,8 +1,8 @@
 import styles from './Divider.module.css';
 
-function Divider({ marginBottom }) {
+function Divider({ marginBottom = '28px' }) {
   return (
-    <div style={{ marginBottom }}>
+    <div className={styles.divider} style={{ marginBottom }}>
       <span className={styles.line}></span>
     </div>
   );
