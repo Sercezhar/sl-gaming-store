@@ -5,7 +5,11 @@
 
 .title {
   margin-bottom: 1em;
+  max-width: fit-content;
   text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .buttonWrapper {

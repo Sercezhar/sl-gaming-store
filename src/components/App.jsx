@@ -4,6 +4,7 @@ import BestDeals from './BestDeals';
 import Container from './Container';
 import Footer from './Footer';
 import ImageSlider from './ImageSlider/ImageSlider';
+import Preorder from './Preorder';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
 
       <Container>
         <ImageSlider />
+
+        <Preorder />
 
         <BestDeals />
       </Container>

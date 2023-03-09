@@ -4,7 +4,9 @@ import styles from './ProductSliderItemFooter.module.css';
 function ProductSliderItemFooter({ product }) {
   return (
     <div className={styles.footer}>
-      <h3 className={styles.title}>{product.title}</h3>
+      <h3 className={styles.title} title={product.title}>
+        {product.title}
+      </h3>
 
       <span className={styles.buttonWrapper}>
         <button className={styles.button} type="button">
