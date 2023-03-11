@@ -1,4 +1,5 @@
 .list {
   display: flex;
+  margin-top: 28px;
   transition: transform 300ms var(--transition);
 }

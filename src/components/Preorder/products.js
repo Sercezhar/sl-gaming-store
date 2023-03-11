@@ -8,8 +8,9 @@ const products = [
     genres: ['Survival', 'Open World'],
     date: 'December, 2023',
     publisher: 'GSC Game World',
-    priceUSD: 60,
+    priceUSD: 59.99,
     priceUAH: 1350,
+    discount: null,
   },
   {
     image: 'src/assets/images/products/preorder/starfield.jpg',
@@ -19,8 +20,9 @@ const products = [
     genres: ['RPG', 'Open World'],
     date: 'September 6, 2023',
     publisher: 'Bethesda',
-    priceUSD: 70,
+    priceUSD: 69.99,
     priceUAH: 1600,
+    discount: 10,
   },
   {
     image:
@@ -31,8 +33,9 @@ const products = [
     genres: ['Action', 'Shooter'],
     date: '2023',
     publisher: 'Rocksteady Studios',
-    priceUSD: 70,
+    priceUSD: 69.99,
     priceUAH: 1600,
+    discount: null,
   },
   {
     image: 'src/assets/images/products/preorder/hades-2.jpg',
@@ -42,8 +45,9 @@ const products = [
     genres: ['Action RPG', 'Roguelite'],
     date: '2023',
     publisher: 'Supergiant Games',
-    priceUSD: 50,
+    priceUSD: 49.99,
     priceUAH: 1125,
+    discount: null,
   },
 
   {
@@ -54,8 +58,9 @@ const products = [
     genres: ['Action', 'Adventure'],
     date: 'April 28, 2023',
     publisher: 'Respawn',
-    priceUSD: 70,
+    priceUSD: 69.99,
     priceUAH: 1600,
+    discount: null,
   },
 
   {
@@ -66,8 +71,9 @@ const products = [
     genres: ['Action', 'Fighting'],
     date: 'June 2, 2023',
     publisher: 'CAPCOM Co., Ltd.',
-    priceUSD: 60,
+    priceUSD: 59.99,
     priceUAH: 1350,
+    discount: null,
   },
 ];
 

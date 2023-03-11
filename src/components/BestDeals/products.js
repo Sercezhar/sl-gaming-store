@@ -7,8 +7,9 @@ const products = [
     genres: ['Action', 'Adventure'],
     date: 'October 26, 2018',
     publisher: 'Rockstar Games',
-    priceUSD: 40,
+    priceUSD: 39.99,
     priceUAH: 900,
+    discount: 50,
   },
   {
     image: 'src/assets/images/products/sale/mortal_kombat_11.jpg',
@@ -18,8 +19,9 @@ const products = [
     genres: ['Action', 'Fighting'],
     date: 'April 23, 2019',
     publisher: 'NetherRealm Studios',
-    priceUSD: 50,
+    priceUSD: 49.99,
     priceUAH: 1125,
+    discount: 50,
   },
   {
     image: 'src/assets/images/products/sale/metro-exodus.jpg',
@@ -29,8 +31,9 @@ const products = [
     genres: ['Shooter', 'Adventure'],
     date: 'February 14, 2019',
     publisher: '4A Games',
-    priceUSD: 30,
+    priceUSD: 29.99,
     priceUAH: 675,
+    discount: 40,
   },
 
   {
@@ -41,8 +44,9 @@ const products = [
     genres: ['Horror', 'Survival'],
     date: 'May 7, 2021',
     publisher: 'CAPCOM Co., Ltd.',
-    priceUSD: 40,
+    priceUSD: 39.99,
     priceUAH: 900,
+    discount: 30,
   },
   {
     image: 'src/assets/images/products/sale/assassins-creed-valhalla.jpg',
@@ -52,8 +56,9 @@ const products = [
     genres: ['Adventure', 'RPG'],
     date: 'November 10, 2020',
     publisher: 'Ubisoft',
-    priceUSD: 40,
+    priceUSD: 39.99,
     priceUAH: 900,
+    discount: 20,
   },
   {
     image: 'src/assets/images/products/sale/grand-theft-auto-5.jpg',
@@ -63,8 +68,9 @@ const products = [
     genres: ['Action', 'Open World'],
     date: 'September 17, 2013',
     publisher: 'Rockstar Games',
-    priceUSD: 30,
+    priceUSD: 29.99,
     priceUAH: 675,
+    discount: 20,
   },
 ];
 

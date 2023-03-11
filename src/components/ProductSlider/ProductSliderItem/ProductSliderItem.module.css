@@ -1,9 +1,27 @@
 .item {
+  position: relative;
   max-width: 344px;
   background-color: var(--secondary-color);
-  border-radius: 25px;
+  border-radius: 1em;
 }
 
 .item:not(:last-child) {
   margin-right: 2.75em;
+}
+
+.discountIcon {
+  position: absolute;
+  top: -28px;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='100' height='100' viewBox='0 0 500 500'%3E%3Cpath fill='%23ffa033' d='m500 250-26.784 29.409 18.32 35.309-33.487 21.454 8.483 38.858-37.913 12.025-1.841 39.723-39.734 1.841-12.024 37.924-38.859-8.494-21.454 33.498-35.298-18.321L250 500l-29.419-26.774-35.299 18.321-21.464-33.498-38.859 8.494-12.014-37.924-39.723-1.841-1.851-39.734-37.913-12.023 8.483-38.849-33.488-21.454 18.321-35.309L0 250l26.774-29.409-18.321-35.309 33.488-21.453-8.483-38.859 37.913-12.014 1.851-39.734 39.734-1.841 12.014-37.913 38.859 8.484 21.453-33.489 35.299 18.321L250 0l29.409 26.784 35.309-18.321 21.454 33.499 38.858-8.494 12.014 37.913 39.734 1.851 1.841 39.734 37.913 12.014-8.483 38.859 33.487 21.443-18.32 35.309z'/%3E%3C/svg%3E");
+  background-size: contain;
+  filter: drop-shadow(0px 4px 6px rgba(255, 160, 51, 0.25));
 }

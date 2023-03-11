@@ -12,6 +12,11 @@
   white-space: nowrap;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+}
+
 .buttonWrapper {
   position: relative;
   display: flex;
@@ -49,13 +54,13 @@
 .text::before {
   content: '';
   display: inline-block;
-  margin-right: 0.6em;
+  margin-right: 0.8em;
 }
 
 .text::after {
   content: '';
   display: inline-block;
-  margin-right: 0.4em;
+  margin-right: 0.2em;
 }
 
 .buttonWrapper:hover .text {
@@ -65,4 +70,27 @@
 .price {
   width: 70%;
   text-align: center;
+}
+
+.priceOld {
+  position: relative;
+  margin-left: 1.5em;
+  color: var(--tertiary-color);
+  font-weight: 500;
+}
+
+.priceOld::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: calc(100% + 1.4em);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 90%
+  );
 }

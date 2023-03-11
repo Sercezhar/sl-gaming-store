@@ -8,6 +8,10 @@ function ProductSliderItem({ product }) {
       <ProductSliderItemBody product={product} />
 
       <ProductSliderItemFooter product={product} />
+
+      {product.discount ? (
+        <span className={styles.discountIcon}>-{product.discount}%</span>
+      ) : null}
     </li>
   );
 }
