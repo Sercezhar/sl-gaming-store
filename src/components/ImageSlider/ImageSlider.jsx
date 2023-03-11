@@ -33,7 +33,7 @@ const ImageSlider = () => {
   return (
     <Section>
       <Divider />
-      <SecondaryTitle text="New big releases">
+      <SecondaryTitle text="New releases">
         <BsFillPatchExclamationFill size={20} color="var(--primary-color)" />
       </SecondaryTitle>
 
