@@ -9,7 +9,7 @@ const products = [
     date: 'December, 2023',
     publisher: 'GSC Game World',
     priceUSD: 59.99,
-    priceUAH: 1350,
+    priceUAH: 1399,
     discount: null,
   },
   {
@@ -21,7 +21,7 @@ const products = [
     date: 'September 6, 2023',
     publisher: 'Bethesda',
     priceUSD: 69.99,
-    priceUAH: 1600,
+    priceUAH: 1599,
     discount: 10,
   },
   {
@@ -34,7 +34,7 @@ const products = [
     date: '2023',
     publisher: 'Rocksteady Studios',
     priceUSD: 69.99,
-    priceUAH: 1600,
+    priceUAH: 1599,
     discount: null,
   },
   {
@@ -46,7 +46,7 @@ const products = [
     date: '2023',
     publisher: 'Supergiant Games',
     priceUSD: 49.99,
-    priceUAH: 1125,
+    priceUAH: 1199,
     discount: null,
   },
 
@@ -59,7 +59,7 @@ const products = [
     date: 'April 28, 2023',
     publisher: 'Respawn',
     priceUSD: 69.99,
-    priceUAH: 1600,
+    priceUAH: 1599,
     discount: null,
   },
 
@@ -72,7 +72,7 @@ const products = [
     date: 'June 2, 2023',
     publisher: 'CAPCOM Co., Ltd.',
     priceUSD: 59.99,
-    priceUAH: 1350,
+    priceUAH: 1399,
     discount: null,
   },
 ];

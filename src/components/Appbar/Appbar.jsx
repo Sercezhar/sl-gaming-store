@@ -1,13 +1,14 @@
-import { useState } from 'react';
 import styles from './Appbar.module.css';
 import AppbarActions from './AppbarActions';
 import AppbarLogo from './AppbarLogo';
 import AppbarSearch from './AppbarSearch';
 
-function Appbar() {
-  const [currentLanguage, setCurrentLanguage] = useState(0);
-  const [currentCurrency, setCurrentCurrency] = useState(0);
-
+function Appbar({
+  currentLanguage,
+  setCurrentLanguage,
+  currentCurrency,
+  setCurrentCurrency,
+}) {
   return (
     <header className={styles.header}>
       <AppbarLogo />

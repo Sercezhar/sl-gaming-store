@@ -5,7 +5,7 @@ import SecondaryTitle from '../SecondaryTitle';
 import Section from '../Section';
 import products from './products';
 
-function BestDeals() {
+function BestDeals({ currentCurrency }) {
   return (
     <Section>
       <Divider />
@@ -14,7 +14,7 @@ function BestDeals() {
         <IoMdWallet size={20} color="var(--primary-color)" />
       </SecondaryTitle>
 
-      <ProductSlider products={products} />
+      <ProductSlider products={products} currentCurrency={currentCurrency} />
     </Section>
   );
 }

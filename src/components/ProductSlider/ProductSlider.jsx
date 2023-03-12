@@ -3,7 +3,7 @@ import styles from './ProductSlider.module.css';
 import ProductSliderControl from './ProductSliderControl';
 import ProductSliderItem from './ProductSliderItem';
 
-function ProductSlider({ products }) {
+function ProductSlider({ products, currentCurrency }) {
   const [listPosition, setListPosition] = useState(0);
 
   const cardWidth = () => {
@@ -40,7 +40,11 @@ function ProductSlider({ products }) {
           }}
         >
           {products.map((product, index) => (
-            <ProductSliderItem product={product} key={index} />
+            <ProductSliderItem
+              product={product}
+              key={index}
+              currentCurrency={currentCurrency}
+            />
           ))}
         </ul>
       </div>

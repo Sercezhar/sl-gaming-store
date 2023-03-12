@@ -5,7 +5,7 @@ import products from './products';
 import { MdVpnKey } from 'react-icons/md';
 import SecondaryTitle from '../SecondaryTitle';
 
-function Preorder() {
+function Preorder({ currentCurrency }) {
   return (
     <Section>
       <Divider />
@@ -14,7 +14,7 @@ function Preorder() {
         <MdVpnKey size={20} color="var(--primary-color)" />
       </SecondaryTitle>
 
-      <ProductSlider products={products} />
+      <ProductSlider products={products} currentCurrency={currentCurrency} />
     </Section>
   );
 }

@@ -8,7 +8,7 @@ const products = [
     date: 'October 26, 2018',
     publisher: 'Rockstar Games',
     priceUSD: 39.99,
-    priceUAH: 900,
+    priceUAH: 899,
     discount: 50,
   },
   {
@@ -20,7 +20,7 @@ const products = [
     date: 'April 23, 2019',
     publisher: 'NetherRealm Studios',
     priceUSD: 49.99,
-    priceUAH: 1125,
+    priceUAH: 1199,
     discount: 50,
   },
   {
@@ -32,7 +32,7 @@ const products = [
     date: 'February 14, 2019',
     publisher: '4A Games',
     priceUSD: 29.99,
-    priceUAH: 675,
+    priceUAH: 699,
     discount: 40,
   },
 
@@ -45,7 +45,7 @@ const products = [
     date: 'May 7, 2021',
     publisher: 'CAPCOM Co., Ltd.',
     priceUSD: 39.99,
-    priceUAH: 900,
+    priceUAH: 899,
     discount: 30,
   },
   {
@@ -57,7 +57,7 @@ const products = [
     date: 'November 10, 2020',
     publisher: 'Ubisoft',
     priceUSD: 39.99,
-    priceUAH: 900,
+    priceUAH: 899,
     discount: 20,
   },
   {
@@ -69,7 +69,7 @@ const products = [
     date: 'September 17, 2013',
     publisher: 'Rockstar Games',
     priceUSD: 29.99,
-    priceUAH: 675,
+    priceUAH: 699,
     discount: 20,
   },
 ];
