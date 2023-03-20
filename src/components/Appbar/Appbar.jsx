@@ -5,19 +5,20 @@ import AppbarSearch from './AppbarSearch';
 
 function Appbar({
   currentLanguage,
-  setCurrentLanguage,
+  handleLanguageChange,
   currentCurrency,
   setCurrentCurrency,
+  t,
 }) {
   return (
     <header className={styles.header}>
       <AppbarLogo />
 
-      <AppbarSearch />
+      <AppbarSearch t={t} />
 
       <AppbarActions
         currentLanguage={currentLanguage}
-        setCurrentLanguage={setCurrentLanguage}
+        handleLanguageChange={handleLanguageChange}
         currentCurrency={currentCurrency}
         setCurrentCurrency={setCurrentCurrency}
       />

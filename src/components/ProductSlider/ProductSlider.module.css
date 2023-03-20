@@ -1,3 +1,7 @@
+.wrapper {
+  position: relative;
+}
+
 .list {
   display: flex;
   margin-top: 28px;

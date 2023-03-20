@@ -52,6 +52,11 @@
   cursor: pointer;
 }
 
+.item.active {
+  color: #fff;
+  pointer-events: none;
+}
+
 .item:hover {
   color: #fff;
   background-color: #202731;

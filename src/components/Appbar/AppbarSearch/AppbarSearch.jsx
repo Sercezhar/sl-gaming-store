@@ -1,7 +1,7 @@
 import { IoSearch } from 'react-icons/io5';
 import styles from './AppbarSearch.module.css';
 
-function AppbarSearch() {
+function AppbarSearch({ t }) {
   return (
     <form className={styles.form}>
       <label htmlFor="search"></label>
@@ -9,7 +9,7 @@ function AppbarSearch() {
         className={styles.input}
         type="text"
         id="search"
-        placeholder="Search the entire store"
+        placeholder={t('header.placeholder')}
         autoComplete="off"
       />
 

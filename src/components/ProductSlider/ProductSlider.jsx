@@ -3,7 +3,7 @@ import styles from './ProductSlider.module.css';
 import ProductSliderControl from './ProductSliderControl';
 import ProductSliderItem from './ProductSliderItem';
 
-function ProductSlider({ products, currentCurrency }) {
+function ProductSlider({ products, currentCurrency, currentLanguage, t }) {
   const [listPosition, setListPosition] = useState(0);
 
   const cardWidth = () => {
@@ -31,7 +31,7 @@ function ProductSlider({ products, currentCurrency }) {
   }
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div style={{ maxWidth: '1120px', overflowX: 'hidden' }}>
         <ul
           className={styles.list}
@@ -44,6 +44,8 @@ function ProductSlider({ products, currentCurrency }) {
               product={product}
               key={index}
               currentCurrency={currentCurrency}
+              currentLanguage={currentLanguage}
+              t={t}
             />
           ))}
         </ul>

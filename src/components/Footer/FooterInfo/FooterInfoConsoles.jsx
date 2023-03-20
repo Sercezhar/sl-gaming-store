@@ -1,19 +1,19 @@
 import styles from './FooterInfo.module.css';
 
-const consoles = [
-  { title: 'Pre Order', link: '#' },
-  { title: 'Play Station 5', link: '#' },
-  { title: 'Xbox Series X/S', link: '#' },
-  { title: 'New Releases', link: '#' },
-  { title: 'Best Sellers', link: '#' },
-  { title: 'Prepaid Cards', link: '#' },
-  { title: 'Consoles & Accessories', link: '#' },
-];
+function FooterInfoConsoles({ t }) {
+  const consoles = [
+    { title: t('footer.info.consoles.items.0'), link: '#' },
+    { title: t('footer.info.consoles.items.1'), link: '#' },
+    { title: t('footer.info.consoles.items.2'), link: '#' },
+    { title: t('footer.info.consoles.items.3'), link: '#' },
+    { title: t('footer.info.consoles.items.4'), link: '#' },
+    { title: t('footer.info.consoles.items.5'), link: '#' },
+    { title: t('footer.info.consoles.items.6'), link: '#' },
+  ];
 
-function FooterInfoConsoles() {
   return (
     <div>
-      <h3 className={styles.title}>Consoles</h3>
+      <h3 className={styles.title}>{t('footer.info.consoles.title')}</h3>
 
       <ul>
         {consoles.map(({ title, link }, index) => (

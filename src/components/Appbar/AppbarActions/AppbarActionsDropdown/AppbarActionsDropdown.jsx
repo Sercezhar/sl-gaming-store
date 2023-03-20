@@ -8,15 +8,24 @@ let cx = classNames.bind(styles);
 function AppbarActionsDropdown({ array, currentState, setCurrentState }) {
   const { ref, isOpen, setIsOpen } = useClickOutside(false);
 
+  function handleStateChange(value, lng) {
+    setCurrentState(value, lng);
+    setIsOpen(false);
+  }
+
   let arrowClasses = cx({
     arrow: true,
     rotate: isOpen,
   });
 
-  function handleStateChange(value) {
-    setCurrentState(value);
-    setIsOpen(false);
-  }
+  const itemClasses = index => {
+    let classes = cx({
+      item: true,
+      active: currentState === index,
+    });
+
+    return classes;
+  };
 
   return (
     <div className={styles.dropdown} ref={ref}>
@@ -42,11 +51,11 @@ function AppbarActionsDropdown({ array, currentState, setCurrentState }) {
       {isOpen ? (
         <div className={styles.listWrapper}>
           <ul className={styles.list}>
-            {array.map(({ name, icon }, index) => (
+            {array.map(({ name, icon, tag }, index) => (
               <li
-                className={styles.item}
+                className={itemClasses(index)}
                 key={index}
-                onClick={() => handleStateChange(index)}
+                onClick={() => handleStateChange(index, tag)}
               >
                 <svg className={styles.icon} width="20" height="20">
                   <use href={icon} />

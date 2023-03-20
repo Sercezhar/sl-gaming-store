@@ -1,0 +1,79 @@
+{
+  "header": {
+    "placeholder": "Search the entire store"
+  },
+
+  "imageSlider": {
+    "title": "New Releases"
+  },
+
+  "preorder": {
+    "title": "Preorder"
+  },
+
+  "bestDeals": {
+    "title": "Best Deals"
+  },
+
+  "productSlider": {
+    "buttonCart": "Add to cart",
+    "item": {
+      "genre": "Genre",
+      "date": "Release date",
+      "developer": "Developer"
+    }
+  },
+
+  "footer": {
+    "info": {
+      "about": {
+        "title": "About us",
+        "text": "We are one of the Middle East's leading online video game and digital card retailers. We exclusively sell PSN Wallet Top Ups and Xbox Live credits with instant code delivery to your meplay account. We also have the latest games for PS5, Xbox Series X/S, and Nintendo Switch at the best prices."
+      },
+      "consoles": {
+        "title": "Consoles",
+        "items": {
+          "0": "Pre Order",
+          "1": "Play Station 5",
+          "2": "Xbox Series X/S",
+          "3": "New Releases",
+          "4": "Best Sellers",
+          "5": "Prepaid Cards",
+          "6": "Consoles & Accessories"
+        }
+      },
+      "links": {
+        "title": "Quick links",
+        "items": {
+          "0": "Help",
+          "1": "FAQ's",
+          "2": "Contact Us",
+          "3": "My Account",
+          "4": "Privacy Policy"
+        }
+      },
+      "deliver": {
+        "title": "Where we deliver",
+        "text": "Our delivery service is fast and safe, using established reputable shippers so that you can receive your order promptly and in premier condition We have free delivery in UAE and quick delivery services to Saudi Arabia."
+      }
+    },
+    "links": {
+      "socials": {
+        "title": "Stay connected with us"
+      },
+      "apps": {
+        "title": "Download our apps"
+      },
+      "payment": {
+        "title": "Pay seсurely"
+      }
+    },
+    "notices": {
+      "text": "All Rights Reserved",
+      "links": {
+        "0": "Help",
+        "1": "Contact Us"
+      }
+    }
+  }
+}

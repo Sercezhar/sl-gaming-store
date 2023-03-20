@@ -6,7 +6,7 @@ import { currency, flags } from './data';
 
 function AppbarActions({
   currentLanguage,
-  setCurrentLanguage,
+  handleLanguageChange,
   currentCurrency,
   setCurrentCurrency,
 }) {
@@ -17,7 +17,7 @@ function AppbarActions({
           array={flags}
           isIconRounded={true}
           currentState={currentLanguage}
-          setCurrentState={setCurrentLanguage}
+          setCurrentState={handleLanguageChange}
         />
       </li>
 

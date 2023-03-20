@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './App.module.css';
 import Appbar from './Appbar/Appbar';
 import BestDeals from './BestDeals';
@@ -15,10 +16,20 @@ function App() {
     return Number(window.localStorage.getItem('language')) ?? 0;
   });
 
+  const [t, i18n] = useTranslation('global');
+
   useEffect(() => {
     window.localStorage.setItem('currency', currentCurrency);
     window.localStorage.setItem('language', currentLanguage);
   }, [currentCurrency, currentLanguage]);
+
+  function handleLanguageChange(index, lng) {
+    setCurrentLanguage(index);
+
+    if (lng) {
+      i18n.changeLanguage(lng);
+    }
+  }
 
   return (
     <div className={styles.app}>
@@ -26,18 +37,27 @@ function App() {
         currentCurrency={currentCurrency}
         setCurrentCurrency={setCurrentCurrency}
         currentLanguage={currentLanguage}
-        setCurrentLanguage={setCurrentLanguage}
+        handleLanguageChange={handleLanguageChange}
+        t={t}
       />
 
       <Container>
-        <ImageSlider />
+        <ImageSlider t={t} />
 
-        <Preorder currentCurrency={currentCurrency} />
+        <Preorder
+          currentCurrency={currentCurrency}
+          currentLanguage={currentLanguage}
+          t={t}
+        />
 
-        <BestDeals currentCurrency={currentCurrency} />
+        <BestDeals
+          currentCurrency={currentCurrency}
+          currentLanguage={currentLanguage}
+          t={t}
+        />
       </Container>
 
-      <Footer />
+      <Footer t={t} />
     </div>
   );
 }

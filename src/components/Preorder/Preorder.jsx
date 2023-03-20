@@ -1,20 +1,25 @@
+import { MdVpnKey } from 'react-icons/md';
 import Divider from '../Divider';
 import ProductSlider from '../ProductSlider';
+import SecondaryTitle from '../SecondaryTitle';
 import Section from '../Section';
 import products from './products';
-import { MdVpnKey } from 'react-icons/md';
-import SecondaryTitle from '../SecondaryTitle';
 
-function Preorder({ currentCurrency }) {
+function Preorder({ currentCurrency, currentLanguage, t }) {
   return (
     <Section>
       <Divider />
 
-      <SecondaryTitle text="Preorder">
+      <SecondaryTitle text={t('preorder.title')}>
         <MdVpnKey size={20} color="var(--primary-color)" />
       </SecondaryTitle>
 
-      <ProductSlider products={products} currentCurrency={currentCurrency} />
+      <ProductSlider
+        products={products}
+        currentCurrency={currentCurrency}
+        currentLanguage={currentLanguage}
+        t={t}
+      />
     </Section>
   );
 }

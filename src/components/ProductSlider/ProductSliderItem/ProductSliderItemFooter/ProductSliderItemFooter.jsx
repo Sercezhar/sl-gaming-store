@@ -2,8 +2,9 @@ import handlePriceDiscount from '@/utils/handlePriceDiscount';
 import { MdOutlineAddShoppingCart } from 'react-icons/md';
 import styles from './ProductSliderItemFooter.module.css';
 
-function ProductSliderItemFooter({ product, currentCurrency }) {
-  const currency = currentCurrency === 0 ? product.priceUSD : product.priceUAH;
+function ProductSliderItemFooter({ product, currentCurrency, t }) {
+  const currency =
+    currentCurrency === 0 ? product.price.USD : product.price.UAH;
 
   return (
     <div className={styles.footer}>
@@ -17,7 +18,7 @@ function ProductSliderItemFooter({ product, currentCurrency }) {
             <span>
               <MdOutlineAddShoppingCart size={20} color="#fff" />
             </span>
-            <span className={styles.text}>Add to cart</span>
+            <span className={styles.text}>{t('productSlider.buttonCart')}</span>
           </button>
 
           <span className={styles.price}>

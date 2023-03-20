@@ -7,7 +7,7 @@ import images from './images';
 import ImageSliderCarousel from './ImageSliderCarousel';
 import ImageSliderControl from './ImageSliderControl';
 
-const ImageSlider = () => {
+const ImageSlider = ({ t }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const ImageSlider = () => {
   return (
     <Section>
       <Divider />
-      <SecondaryTitle text="New releases">
+      <SecondaryTitle text={t('imageSlider.title')}>
         <BsFillPatchExclamationFill size={20} color="var(--primary-color)" />
       </SecondaryTitle>
 

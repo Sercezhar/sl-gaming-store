@@ -1,6 +1,7 @@
+import handleDateFormat from '@/utils/handleDateFormat';
 import styles from './ProductSliderItemBody.module.css';
 
-function ProductSliderItemBody({ product }) {
+function ProductSliderItemBody({ product, currentLanguage, t }) {
   return (
     <div className={styles.body}>
       <img src={product.image} alt={product.title} />
@@ -8,13 +9,15 @@ function ProductSliderItemBody({ product }) {
       <div className={styles.overlay}>
         <p className={styles.row}>{product.description}</p>
         <p className={styles.row}>
-          Genre: <span>{product.genres.join(', ')}</span>
+          {t('productSlider.item.genre')}:{' '}
+          <span>{product.genres.join(', ')}</span>
         </p>
         <p className={styles.row}>
-          Release date: <span>{product.date}</span>
+          {t('productSlider.item.date')}:{' '}
+          <span>{handleDateFormat(product.date, currentLanguage)}</span>
         </p>
         <p className={styles.row}>
-          Developer: <span>{product.publisher}</span>
+          {t('productSlider.item.developer')}: <span>{product.publisher}</span>
         </p>
       </div>
     </div>

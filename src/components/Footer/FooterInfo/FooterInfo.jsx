@@ -5,16 +5,16 @@ import FooterInfoConsoles from './FooterInfoConsoles';
 import FooterInfoDeliver from './FooterInfoDeliver';
 import FooterInfoLinks from './FooterInfoLinks';
 
-function FooterInfo() {
+function FooterInfo({ t }) {
   return (
     <div className={styles.info}>
-      <FooterInfoAbout />
+      <FooterInfoAbout t={t} />
 
-      <FooterInfoConsoles />
+      <FooterInfoConsoles t={t} />
 
-      <FooterInfoLinks />
+      <FooterInfoLinks t={t} />
 
-      <FooterInfoDeliver />
+      <FooterInfoDeliver t={t} />
     </div>
   );
 }

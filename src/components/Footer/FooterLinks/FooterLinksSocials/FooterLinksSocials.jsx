@@ -7,10 +7,10 @@ import {
 } from 'react-icons/ri';
 import styles from './FooterLinksSocials.module.css';
 
-function FooterLinksSocials() {
+function FooterLinksSocials({ t }) {
   return (
     <div>
-      <h3 className={styles.title}>Stay connected with us</h3>
+      <h3 className={styles.title}>{t('footer.links.socials.title')}</h3>
 
       <ul className={styles.list}>
         <li className={styles.item}>

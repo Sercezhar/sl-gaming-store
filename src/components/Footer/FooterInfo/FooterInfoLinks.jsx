@@ -1,17 +1,17 @@
 import styles from './FooterInfo.module.css';
 
-const links = [
-  { title: 'Help', link: '#' },
-  { title: "FAQ's", link: '#' },
-  { title: 'Contact Us', link: '#' },
-  { title: 'My Account', link: '#' },
-  { title: 'Privacy Policy', link: '#' },
-];
+function FooterInfoLinks({ t }) {
+  const links = [
+    { title: t('footer.info.links.items.0'), link: '#' },
+    { title: t('footer.info.links.items.1'), link: '#' },
+    { title: t('footer.info.links.items.2'), link: '#' },
+    { title: t('footer.info.links.items.3'), link: '#' },
+    { title: t('footer.info.links.items.4'), link: '#' },
+  ];
 
-function FooterInfoLinks() {
   return (
     <div>
-      <h3 className={styles.title}>Quick links</h3>
+      <h3 className={styles.title}>{t('footer.info.links.title')}</h3>
 
       <ul>
         {links.map(({ title, link }, index) => (

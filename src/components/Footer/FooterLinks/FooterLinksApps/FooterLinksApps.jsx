@@ -1,10 +1,10 @@
 import { RiAppleFill, RiGoogleFill } from 'react-icons/ri';
 import styles from './FooterLinksApps.module.css';
 
-function FooterLinksApps() {
+function FooterLinksApps({ t }) {
   return (
     <div>
-      <h3 className={styles.title}>Download our apps</h3>
+      <h3 className={styles.title}>{t('footer.links.apps.title')}</h3>
 
       <ul className={styles.list}>
         <li className={styles.item}>

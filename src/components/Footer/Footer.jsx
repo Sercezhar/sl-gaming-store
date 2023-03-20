@@ -5,18 +5,18 @@ import FooterInfo from './FooterInfo';
 import FooterLinks from './FooterLinks';
 import FooterNotices from './FooterNotices';
 
-function Footer() {
+function Footer({ t }) {
   return (
     <footer className={styles.footer}>
       <Container>
         <Divider marginBottom="86px" />
 
-        <FooterInfo />
+        <FooterInfo t={t} />
 
-        <FooterLinks />
+        <FooterLinks t={t} />
       </Container>
 
-      <FooterNotices />
+      <FooterNotices t={t} />
     </footer>
   );
 }

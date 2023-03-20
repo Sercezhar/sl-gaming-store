@@ -1,10 +1,10 @@
 import { FaCcMastercard, FaCcPaypal, FaCcVisa } from 'react-icons/fa';
 import styles from './FooterLinksPayment.module.css';
 
-function FooterLinksPayment() {
+function FooterLinksPayment({ t }) {
   return (
     <div>
-      <h3 className={styles.title}>Pay sequrely</h3>
+      <h3 className={styles.title}>{t('footer.links.payment.title')}</h3>
 
       <ul className={styles.list}>
         <li className={styles.item}>

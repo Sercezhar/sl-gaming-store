@@ -7,8 +7,10 @@ const products = [
     genres: ['Action', 'Adventure'],
     date: 'October 26, 2018',
     publisher: 'Rockstar Games',
-    priceUSD: 39.99,
-    priceUAH: 899,
+    price: {
+      USD: 39.99,
+      UAH: 899,
+    },
     discount: 50,
   },
   {
@@ -19,8 +21,10 @@ const products = [
     genres: ['Action', 'Fighting'],
     date: 'April 23, 2019',
     publisher: 'NetherRealm Studios',
-    priceUSD: 49.99,
-    priceUAH: 1199,
+    price: {
+      USD: 49.99,
+      UAH: 1199,
+    },
     discount: 50,
   },
   {
@@ -31,8 +35,10 @@ const products = [
     genres: ['Shooter', 'Adventure'],
     date: 'February 14, 2019',
     publisher: '4A Games',
-    priceUSD: 29.99,
-    priceUAH: 699,
+    price: {
+      USD: 29.99,
+      UAH: 699,
+    },
     discount: 40,
   },
 
@@ -44,8 +50,10 @@ const products = [
     genres: ['Horror', 'Survival'],
     date: 'May 7, 2021',
     publisher: 'CAPCOM Co., Ltd.',
-    priceUSD: 39.99,
-    priceUAH: 899,
+    price: {
+      USD: 39.99,
+      UAH: 899,
+    },
     discount: 30,
   },
   {
@@ -56,8 +64,10 @@ const products = [
     genres: ['Adventure', 'RPG'],
     date: 'November 10, 2020',
     publisher: 'Ubisoft',
-    priceUSD: 39.99,
-    priceUAH: 899,
+    price: {
+      USD: 39.99,
+      UAH: 899,
+    },
     discount: 20,
   },
   {
@@ -68,8 +78,10 @@ const products = [
     genres: ['Action', 'Open World'],
     date: 'September 17, 2013',
     publisher: 'Rockstar Games',
-    priceUSD: 29.99,
-    priceUAH: 699,
+    price: {
+      USD: 29.99,
+      UAH: 699,
+    },
     discount: 20,
   },
 ];
