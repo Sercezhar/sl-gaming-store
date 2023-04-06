@@ -40,7 +40,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   opacity: 0;
   transition: opacity 200ms var(--transition);
   transition-delay: 200ms;
@@ -89,7 +89,7 @@
   padding: 1em 2em;
   width: 700px;
   height: 100vh;
-  background-color: var(--secondary-color);
+  background-color: var(--main-bg-color);
   transition: transform 200ms var(--transition);
   transition-delay: 100ms;
   z-index: 2;
@@ -151,6 +151,47 @@
   padding: 0.72em 1.1em;
   border: none;
   border-radius: 25px;
-  background: var(--primary-color);
+  background-color: var(--secondary-color);
+  transition: background-color, 200ms var(--transition);
   cursor: pointer;
+}
+
+.buttonDelete:hover {
+  background: var(--primary-color);
+}
+
+.checkout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2em 4em;
+}
+
+.buttonPurchase,
+.buttonClear {
+  padding: 0.8em 4em;
+  border: none;
+  background: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.buttonClear {
+  margin-right: 2em;
+  background-color: var(--secondary-color);
+  transition: 200ms background-color, color var(--transition);
+}
+
+.buttonClear:hover {
+  color: #fff;
+  background-color: #202731;
+}
+
+.buttonPurchase {
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: var(--primary-bs-hover);
 }

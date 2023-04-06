@@ -110,6 +110,15 @@ function AppbarActionsCart({ cart, deleteFromCart, currentCurrency }) {
                 </li>
               ))}
             </ul>
+
+            <div className={styles.checkout}>
+              <button className={styles.buttonClear} type="button">
+                Очистити
+              </button>
+              <button className={styles.buttonPurchase} type="button">
+                Оплатити
+              </button>
+            </div>
           </div>
         </div>
       </div>
