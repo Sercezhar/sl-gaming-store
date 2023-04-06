@@ -35,7 +35,7 @@ function App() {
     }
   }
 
-  function handleCart(product) {
+  function addToCart(product) {
     const item = {
       id: product.id,
       image: product.image,
@@ -69,14 +69,14 @@ function App() {
           currentCurrency={currentCurrency}
           currentLanguage={currentLanguage}
           cart={cart}
-          addToCart={handleCart}
+          addToCart={addToCart}
         />
 
         <BestDeals
           currentCurrency={currentCurrency}
           currentLanguage={currentLanguage}
           cart={cart}
-          addToCart={handleCart}
+          addToCart={addToCart}
         />
       </Container>
 

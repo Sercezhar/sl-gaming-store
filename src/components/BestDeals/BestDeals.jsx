@@ -6,7 +6,7 @@ import SecondaryTitle from '../SecondaryTitle';
 import Section from '../Section';
 import products from './products';
 
-function BestDeals({ currentCurrency, currentLanguage, cart }) {
+function BestDeals({ currentCurrency, currentLanguage, cart, addToCart }) {
   const [t] = useTranslation('global');
 
   return (
@@ -22,6 +22,7 @@ function BestDeals({ currentCurrency, currentLanguage, cart }) {
         currentCurrency={currentCurrency}
         currentLanguage={currentLanguage}
         cart={cart}
+        addToCart={addToCart}
       />
     </Section>
   );
