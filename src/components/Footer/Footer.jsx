@@ -13,10 +13,10 @@ function Footer({ t }) {
 
         <FooterInfo t={t} />
 
-        <FooterLinks t={t} />
+        <FooterLinks />
       </Container>
 
-      <FooterNotices t={t} />
+      <FooterNotices />
     </footer>
   );
 }

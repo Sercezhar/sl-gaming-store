@@ -3,6 +3,10 @@
     "placeholder": "Search the entire store"
   },
 
+  "cart": {
+    "title": "Your cart"
+  },
+
   "imageSlider": {
     "title": "New Releases"
   },
@@ -16,7 +20,10 @@
   },
 
   "productSlider": {
-    "buttonCart": "Add to cart",
+    "buttonCart": {
+      "default": "Add to cart",
+      "added": "In the cart"
+    },
     "item": {
       "genre": "Genre",
       "date": "Release date",

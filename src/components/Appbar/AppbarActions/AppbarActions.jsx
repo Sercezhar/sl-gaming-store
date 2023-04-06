@@ -9,6 +9,8 @@ function AppbarActions({
   handleLanguageChange,
   currentCurrency,
   setCurrentCurrency,
+  cart,
+  deleteFromCart,
 }) {
   return (
     <ul className={styles.list}>
@@ -30,7 +32,11 @@ function AppbarActions({
       </li>
 
       <li className={styles.item}>
-        <AppbarActionsCart />
+        <AppbarActionsCart
+          cart={cart}
+          currentCurrency={currentCurrency}
+          deleteFromCart={deleteFromCart}
+        />
       </li>
 
       <li className={styles.item}>

@@ -2,7 +2,14 @@ import styles from './ProductSliderItem.module.css';
 import ProductSliderItemBody from './ProductSliderItemBody';
 import ProductSliderItemFooter from './ProductSliderItemFooter';
 
-function ProductSliderItem({ product, currentCurrency, currentLanguage, t }) {
+function ProductSliderItem({
+  product,
+  currentCurrency,
+  currentLanguage,
+  cart,
+  addToCart,
+  t,
+}) {
   return (
     <li className={styles.item}>
       <ProductSliderItemBody
@@ -14,6 +21,8 @@ function ProductSliderItem({ product, currentCurrency, currentLanguage, t }) {
       <ProductSliderItemFooter
         product={product}
         currentCurrency={currentCurrency}
+        cart={cart}
+        addToCart={addToCart}
         t={t}
       />
 

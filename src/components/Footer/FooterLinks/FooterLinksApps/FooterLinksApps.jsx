@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { RiAppleFill, RiGoogleFill } from 'react-icons/ri';
 import styles from './FooterLinksApps.module.css';
 
-function FooterLinksApps({ t }) {
+function FooterLinksApps() {
+  const [t] = useTranslation('global');
+
   return (
     <div>
       <h3 className={styles.title}>{t('footer.links.apps.title')}</h3>

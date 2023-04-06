@@ -8,19 +8,22 @@ function Appbar({
   handleLanguageChange,
   currentCurrency,
   setCurrentCurrency,
-  t,
+  cart,
+  deleteFromCart,
 }) {
   return (
     <header className={styles.header}>
       <AppbarLogo />
 
-      <AppbarSearch t={t} />
+      <AppbarSearch />
 
       <AppbarActions
         currentLanguage={currentLanguage}
         handleLanguageChange={handleLanguageChange}
         currentCurrency={currentCurrency}
         setCurrentCurrency={setCurrentCurrency}
+        cart={cart}
+        deleteFromCart={deleteFromCart}
       />
     </header>
   );

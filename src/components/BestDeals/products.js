@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 1,
     image: 'src/assets/images/products/sale/red-dead-redemption-2.jpg',
     title: 'Red Dead Redemption II',
     description:
@@ -14,6 +15,7 @@ const products = [
     discount: 50,
   },
   {
+    id: 2,
     image: 'src/assets/images/products/sale/mortal_kombat_11.jpg',
     title: 'Mortal Kombat XI',
     description:
@@ -28,6 +30,7 @@ const products = [
     discount: 50,
   },
   {
+    id: 3,
     image: 'src/assets/images/products/sale/metro-exodus.jpg',
     title: 'Metro Exodus',
     description:
@@ -43,6 +46,7 @@ const products = [
   },
 
   {
+    id: 4,
     image: 'src/assets/images/products/sale/resident-evil-village.jpg',
     title: 'Resident Evil Village',
     description:
@@ -57,6 +61,7 @@ const products = [
     discount: 30,
   },
   {
+    id: 5,
     image: 'src/assets/images/products/sale/assassins-creed-valhalla.jpg',
     title: "Assassin's Creed Valhalla",
     description:
@@ -71,6 +76,7 @@ const products = [
     discount: 20,
   },
   {
+    id: 6,
     image: 'src/assets/images/products/sale/grand-theft-auto-5.jpg',
     title: 'Grand Theft Auto V',
     description:

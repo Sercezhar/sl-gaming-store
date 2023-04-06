@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { IoMdWallet } from 'react-icons/io';
 import Divider from '../Divider';
 import ProductSlider from '../ProductSlider';
@@ -5,7 +6,9 @@ import SecondaryTitle from '../SecondaryTitle';
 import Section from '../Section';
 import products from './products';
 
-function BestDeals({ currentCurrency, currentLanguage, t }) {
+function BestDeals({ currentCurrency, currentLanguage, cart }) {
+  const [t] = useTranslation('global');
+
   return (
     <Section>
       <Divider />
@@ -18,7 +21,7 @@ function BestDeals({ currentCurrency, currentLanguage, t }) {
         products={products}
         currentCurrency={currentCurrency}
         currentLanguage={currentLanguage}
-        t={t}
+        cart={cart}
       />
     </Section>
   );

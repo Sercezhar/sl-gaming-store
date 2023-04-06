@@ -3,6 +3,10 @@
     "placeholder": "Пошук по магазину"
   },
 
+  "cart": {
+    "title": "Ваша корзина"
+  },
+
   "imageSlider": {
     "title": "Нові релізи"
   },
@@ -16,7 +20,10 @@
   },
 
   "productSlider": {
-    "buttonCart": "В кошик",
+    "buttonCart": {
+      "default": "В кошик",
+      "added": "В кошику"
+    },
     "item": {
       "genre": "Жанр",
       "date": "Дата випуску",

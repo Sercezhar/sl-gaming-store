@@ -1,7 +1,10 @@
 import Container from '@/components/Container';
+import { useTranslation } from 'react-i18next';
 import styles from './FooterNotices.module.css';
 
-function FooterNotices({ t }) {
+function FooterNotices() {
+  const [t] = useTranslation('global');
+
   return (
     <div className={styles.wrapper}>
       <Container>

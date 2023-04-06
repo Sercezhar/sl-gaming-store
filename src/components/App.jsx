@@ -15,13 +15,17 @@ function App() {
   const [currentLanguage, setCurrentLanguage] = useState(() => {
     return Number(window.localStorage.getItem('language')) ?? 0;
   });
+  const [cart, setCart] = useState(() => {
+    return JSON.parse(window.localStorage.getItem('cart')) ?? [];
+  });
 
   const [t, i18n] = useTranslation('global');
 
   useEffect(() => {
     window.localStorage.setItem('currency', currentCurrency);
     window.localStorage.setItem('language', currentLanguage);
-  }, [currentCurrency, currentLanguage]);
+    window.localStorage.setItem('cart', JSON.stringify(cart));
+  }, [currentCurrency, currentLanguage, cart]);
 
   function handleLanguageChange(index, lng) {
     setCurrentLanguage(index);
@@ -31,6 +35,22 @@ function App() {
     }
   }
 
+  function handleCart(product) {
+    const item = {
+      id: product.id,
+      image: product.image,
+      title: product.title,
+      price: product.price,
+      discount: product.discount,
+    };
+
+    setCart([...cart, item]);
+  }
+
+  function deleteFromCart(id) {
+    setCart(prevState => prevState.filter(item => item.id !== id));
+  }
+
   return (
     <div className={styles.app}>
       <Appbar
@@ -38,26 +58,29 @@ function App() {
         setCurrentCurrency={setCurrentCurrency}
         currentLanguage={currentLanguage}
         handleLanguageChange={handleLanguageChange}
-        t={t}
+        cart={cart}
+        deleteFromCart={deleteFromCart}
       />
 
       <Container>
-        <ImageSlider t={t} />
+        <ImageSlider />
 
         <Preorder
           currentCurrency={currentCurrency}
           currentLanguage={currentLanguage}
-          t={t}
+          cart={cart}
+          addToCart={handleCart}
         />
 
         <BestDeals
           currentCurrency={currentCurrency}
           currentLanguage={currentLanguage}
-          t={t}
+          cart={cart}
+          addToCart={handleCart}
         />
       </Container>
 
-      <Footer t={t} />
+      <Footer />
     </div>
   );
 }

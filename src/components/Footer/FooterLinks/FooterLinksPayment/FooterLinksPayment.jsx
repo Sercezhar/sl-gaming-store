@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { FaCcMastercard, FaCcPaypal, FaCcVisa } from 'react-icons/fa';
 import styles from './FooterLinksPayment.module.css';
 
-function FooterLinksPayment({ t }) {
+function FooterLinksPayment() {
+  const [t] = useTranslation('global');
+
   return (
     <div>
       <h3 className={styles.title}>{t('footer.links.payment.title')}</h3>

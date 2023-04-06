@@ -1,5 +1,6 @@
 const products = [
   {
+    id: 11,
     image:
       'src/assets/images/products/preorder/stalker-2-heart-of-chornobyl.jpg',
     title: 'S.T.A.L.K.E.R. 2: Heart of Chornobyl',
@@ -15,6 +16,7 @@ const products = [
     discount: null,
   },
   {
+    id: 12,
     image: 'src/assets/images/products/preorder/starfield.jpg',
     title: 'Starfield',
     description:
@@ -29,6 +31,7 @@ const products = [
     discount: 10,
   },
   {
+    id: 13,
     image:
       'src/assets/images/products/preorder/suicide-squad-kill-the-justice-league.jpg',
     title: 'Suicide Squad: Kill the Justice League',
@@ -44,6 +47,7 @@ const products = [
     discount: null,
   },
   {
+    id: 14,
     image: 'src/assets/images/products/preorder/hades-2.jpg',
     title: 'Hades II',
     description:
@@ -59,6 +63,7 @@ const products = [
   },
 
   {
+    id: 15,
     image: 'src/assets/images/products/preorder/star-wars-jedi-survivor.jpg',
     title: 'STAR WARS Jedi: Survivor',
     description:
@@ -74,6 +79,7 @@ const products = [
   },
 
   {
+    id: 16,
     image: 'src/assets/images/products/preorder/street-fighter-6.jpg',
     title: 'Street Fighter 6',
     description:

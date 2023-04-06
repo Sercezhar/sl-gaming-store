@@ -4,8 +4,11 @@ import ProductSlider from '../ProductSlider';
 import SecondaryTitle from '../SecondaryTitle';
 import Section from '../Section';
 import products from './products';
+import { useTranslation } from 'react-i18next';
 
-function Preorder({ currentCurrency, currentLanguage, t }) {
+function Preorder({ currentCurrency, currentLanguage, cart, addToCart }) {
+  const [t] = useTranslation('global');
+
   return (
     <Section>
       <Divider />
@@ -18,7 +21,8 @@ function Preorder({ currentCurrency, currentLanguage, t }) {
         products={products}
         currentCurrency={currentCurrency}
         currentLanguage={currentLanguage}
-        t={t}
+        cart={cart}
+        addToCart={addToCart}
       />
     </Section>
   );

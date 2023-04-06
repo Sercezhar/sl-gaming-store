@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   RiFacebookFill,
   RiInstagramLine,
@@ -7,7 +8,9 @@ import {
 } from 'react-icons/ri';
 import styles from './FooterLinksSocials.module.css';
 
-function FooterLinksSocials({ t }) {
+function FooterLinksSocials() {
+  const [t] = useTranslation('global');
+
   return (
     <div>
       <h3 className={styles.title}>{t('footer.links.socials.title')}</h3>

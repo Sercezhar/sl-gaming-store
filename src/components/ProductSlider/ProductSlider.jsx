@@ -2,9 +2,18 @@ import { useState } from 'react';
 import styles from './ProductSlider.module.css';
 import ProductSliderControl from './ProductSliderControl';
 import ProductSliderItem from './ProductSliderItem';
+import { useTranslation } from 'react-i18next';
 
-function ProductSlider({ products, currentCurrency, currentLanguage, t }) {
+function ProductSlider({
+  products,
+  currentCurrency,
+  currentLanguage,
+  cart,
+  addToCart,
+}) {
   const [listPosition, setListPosition] = useState(0);
+
+  const [t] = useTranslation('global');
 
   const cardWidth = () => {
     if (listPosition + 2 === products.length) {
@@ -45,6 +54,8 @@ function ProductSlider({ products, currentCurrency, currentLanguage, t }) {
               key={index}
               currentCurrency={currentCurrency}
               currentLanguage={currentLanguage}
+              cart={cart}
+              addToCart={addToCart}
               t={t}
             />
           ))}

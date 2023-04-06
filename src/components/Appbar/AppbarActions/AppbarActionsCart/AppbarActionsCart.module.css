@@ -1,4 +1,5 @@
 .button {
+  position: relative;
   display: flex;
   padding: 0.875em 1.3em;
   background-color: var(--secondary-color);
@@ -11,4 +12,145 @@
 .button:hover {
   background-color: var(--primary-color);
   box-shadow: var(--primary-bs-hover);
+}
+
+.quantity {
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+/* werewrwerwerrwrwerwer */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 200ms var(--transition);
+  transition-delay: 200ms;
+  pointer-events: none;
+}
+
+.backdrop.isOpen {
+  opacity: 1;
+  pointer-events: all;
+  transition-delay: 0ms;
+}
+
+.buttonClose {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  padding: 0.5em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.buttonClose svg {
+  transition: color, 200ms var(--transition);
+}
+
+.buttonClose:hover svg {
+  fill: var(--primary-color);
+}
+
+.title {
+  margin-bottom: 22px;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  word-spacing: 0.1em;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  padding: 1em 2em;
+  width: 700px;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  transition: transform 200ms var(--transition);
+  transition-delay: 100ms;
+  z-index: 2;
+}
+
+.cart.isOpen {
+  transform: translateX(0);
+}
+
+.item {
+  color: #fff;
+}
+
+.item img {
+  margin-right: 1em;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1em;
+  width: 100%;
+}
+
+.price {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.priceDiscount::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 22%;
+  display: block;
+  width: calc(100% + 1.4em);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 90%
+  );
+}
+
+.deleteWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.buttonDelete {
+  padding: 0.72em 1.1em;
+  border: none;
+  border-radius: 25px;
+  background: var(--primary-color);
+  cursor: pointer;
 }

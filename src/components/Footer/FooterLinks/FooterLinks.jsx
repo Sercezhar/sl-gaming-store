@@ -4,17 +4,17 @@ import FooterLinksApps from './FooterLinksApps';
 import FooterLinksPayment from './FooterLinksPayment';
 import FooterLinksSocials from './FooterLinksSocials';
 
-function FooterLinks({ t }) {
+function FooterLinks() {
   return (
     <div className={styles.wrapper}>
       <Divider marginBottom="80px" />
 
       <div className={styles.linksGroup}>
-        <FooterLinksSocials t={t} />
+        <FooterLinksSocials />
 
-        <FooterLinksApps t={t} />
+        <FooterLinksApps />
 
-        <FooterLinksPayment t={t} />
+        <FooterLinksPayment />
       </div>
     </div>
   );
