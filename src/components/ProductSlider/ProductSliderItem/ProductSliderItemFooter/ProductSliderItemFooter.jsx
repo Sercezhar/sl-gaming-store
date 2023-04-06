@@ -48,7 +48,7 @@ function ProductSliderItemFooter({
           </span>
         </span>
 
-        {product.discount ? (
+        {product.discount && !isInCart(product.id) ? (
           <span className={styles.priceOld}>
             {handlePriceDiscount(currency, null, currentCurrency)}
           </span>
