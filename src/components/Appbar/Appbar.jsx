@@ -9,6 +9,7 @@ function Appbar({
   currentCurrency,
   setCurrentCurrency,
   cart,
+  setCart,
   deleteFromCart,
 }) {
   return (
@@ -23,6 +24,7 @@ function Appbar({
         currentCurrency={currentCurrency}
         setCurrentCurrency={setCurrentCurrency}
         cart={cart}
+        setCart={setCart}
         deleteFromCart={deleteFromCart}
       />
     </header>

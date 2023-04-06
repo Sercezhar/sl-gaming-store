@@ -8,21 +8,11 @@ import styles from './AppbarActionsCart.module.css';
 
 let cx = classNames.bind(styles);
 
-function AppbarActionsCart({ cart, deleteFromCart, currentCurrency }) {
+function AppbarActionsCart({ cart, setCart, deleteFromCart, currentCurrency }) {
   const { ref, isOpen, setIsOpen } = useClickOutside();
   const [t] = useTranslation('global');
 
   const currency = price => (currentCurrency === 0 ? price.USD : price.UAH);
-
-  function handleCartOnOpen() {
-    setIsOpen(true);
-    document.body.style.overflowY = 'hidden';
-  }
-
-  function handleCartOnClose() {
-    setIsOpen(false);
-    document.body.style.overflowY = 'auto';
-  }
 
   let cartClasses = cx({
     cart: true,
@@ -39,7 +29,7 @@ function AppbarActionsCart({ cart, deleteFromCart, currentCurrency }) {
       <button
         className={styles.button}
         type="button"
-        onClick={() => handleCartOnOpen()}
+        onClick={() => setIsOpen(true)}
       >
         <MdOutlineLocalGroceryStore size={20} color="#fff" />
 
@@ -52,7 +42,7 @@ function AppbarActionsCart({ cart, deleteFromCart, currentCurrency }) {
         <div ref={ref} className={cartClasses}>
           <button
             className={styles.buttonClose}
-            onClick={() => handleCartOnClose()}
+            onClick={() => setIsOpen(false)}
           >
             <MdClose size={26} color="#fff" />
           </button>
@@ -112,7 +102,12 @@ function AppbarActionsCart({ cart, deleteFromCart, currentCurrency }) {
             </ul>
 
             <div className={styles.checkout}>
-              <button className={styles.buttonClear} type="button">
+              <button
+                className={styles.buttonClear}
+                type="button"
+                onClick={() => setCart([])}
+                disabled={cart.length === 0}
+              >
                 Очистити
               </button>
               <button className={styles.buttonPurchase} type="button">
