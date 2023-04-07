@@ -8,7 +8,7 @@ import styles from './AppbarActionsCart.module.css';
 
 let cx = classNames.bind(styles);
 
-function AppbarActionsCart({ cart, setCart, deleteFromCart, currentCurrency }) {
+function AppbarActionsCart({ cart, deleteFromCart, currentCurrency }) {
   const { ref, isOpen, setIsOpen } = useClickOutside();
   const [t] = useTranslation('global');
 
@@ -23,6 +23,24 @@ function AppbarActionsCart({ cart, setCart, deleteFromCart, currentCurrency }) {
     backdrop: true,
     isOpen,
   });
+
+  function handleCartTotal() {
+    const cartTotal = cart.reduce((acc, item) => {
+      let price = handlePriceDiscount(
+        currency(item.price),
+        item.discount,
+        currentCurrency
+      );
+
+      acc += Number(price.replace(/[$₴]/g, ''));
+
+      return acc;
+    }, 0);
+
+    return currentCurrency === 0 ? `$${cartTotal.toFixed(2)}` : `${cartTotal}₴`;
+  }
+
+  console.log(handleCartTotal());
 
   return (
     <div>
@@ -102,16 +120,11 @@ function AppbarActionsCart({ cart, setCart, deleteFromCart, currentCurrency }) {
             </ul>
 
             <div className={styles.checkout}>
-              <button
-                className={styles.buttonClear}
-                type="button"
-                onClick={() => setCart([])}
-                disabled={cart.length === 0}
-              >
-                Очистити
-              </button>
+              <p className={styles.total}>
+                {t('cart.total')}: {handleCartTotal()}
+              </p>
               <button className={styles.buttonPurchase} type="button">
-                Оплатити
+                {t('cart.buyButton')}
               </button>
             </div>
           </div>

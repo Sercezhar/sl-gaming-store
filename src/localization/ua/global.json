@@ -4,7 +4,9 @@
   },
 
   "cart": {
-    "title": "Ваша корзина"
+    "title": "Ваша корзина",
+    "buyButton": "Придбати",
+    "total": "Всього"
   },
 
   "imageSlider": {

@@ -4,7 +4,9 @@
   },
 
   "cart": {
-    "title": "Your cart"
+    "title": "Your cart",
+    "buyButton": "Purchase",
+    "total": "Total"
   },
 
   "imageSlider": {

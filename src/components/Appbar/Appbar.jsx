@@ -24,7 +24,6 @@ function Appbar({
         currentCurrency={currentCurrency}
         setCurrentCurrency={setCurrentCurrency}
         cart={cart}
-        setCart={setCart}
         deleteFromCart={deleteFromCart}
       />
     </header>

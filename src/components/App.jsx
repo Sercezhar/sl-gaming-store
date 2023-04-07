@@ -59,7 +59,6 @@ function App() {
         currentLanguage={currentLanguage}
         handleLanguageChange={handleLanguageChange}
         cart={cart}
-        setCart={setCart}
         deleteFromCart={deleteFromCart}
       />
 
