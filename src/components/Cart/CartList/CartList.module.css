@@ -1,0 +1,60 @@
+.item {
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.info img {
+  margin-right: 1em;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1em;
+  width: 100%;
+}
+
+.priceGroup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.priceDiscounted::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 22%;
+  display: block;
+  width: calc(100% + 1em);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 90%
+  );
+}
+
+.deleteWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.buttonDelete {
+  padding: 0.72em 1.1em;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--secondary-color);
+  transition: background-color, 200ms var(--transition);
+  cursor: pointer;
+}
+
+.buttonDelete:hover {
+  background: var(--primary-color);
+}

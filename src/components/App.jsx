@@ -1,8 +1,10 @@
+import useClickOutside from '@/hooks/useClickOutside';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './App.module.css';
 import Appbar from './Appbar/Appbar';
 import BestDeals from './BestDeals';
+import Cart from './Cart/Cart';
 import Container from './Container';
 import Footer from './Footer';
 import ImageSlider from './ImageSlider/ImageSlider';
@@ -20,6 +22,8 @@ function App() {
   });
 
   const [t, i18n] = useTranslation('global');
+
+  const { ref, isOpen, setIsOpen } = useClickOutside(false);
 
   useEffect(() => {
     window.localStorage.setItem('currency', currentCurrency);
@@ -53,12 +57,22 @@ function App() {
 
   return (
     <div className={styles.app}>
+      <Cart
+        ref={ref}
+        cart={cart}
+        isOpen={isOpen}
+        isCartOpen={setIsOpen}
+        deleteFromCart={deleteFromCart}
+        currentCurrency={currentCurrency}
+      />
+
       <Appbar
         currentCurrency={currentCurrency}
         setCurrentCurrency={setCurrentCurrency}
         currentLanguage={currentLanguage}
         handleLanguageChange={handleLanguageChange}
         cart={cart}
+        isCartOpen={setIsOpen}
         deleteFromCart={deleteFromCart}
       />
 

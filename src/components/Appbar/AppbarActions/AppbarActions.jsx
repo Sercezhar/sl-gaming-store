@@ -10,6 +10,7 @@ function AppbarActions({
   currentCurrency,
   setCurrentCurrency,
   cart,
+  isCartOpen,
   deleteFromCart,
 }) {
   return (
@@ -34,6 +35,7 @@ function AppbarActions({
       <li className={styles.item}>
         <AppbarActionsCart
           cart={cart}
+          isCartOpen={isCartOpen}
           currentCurrency={currentCurrency}
           deleteFromCart={deleteFromCart}
         />

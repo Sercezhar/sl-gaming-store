@@ -1,0 +1,27 @@
+.checkout {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  width: 100%;
+  background-color: var(--main-bg-color);
+}
+
+.total {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.buttonPurchase {
+  padding: 0.8em 4em;
+  border: none;
+  background: none;
+  color: #fff;
+  background-color: var(--primary-color);
+  box-shadow: var(--primary-bs-hover);
+  border-radius: 25px;
+  cursor: pointer;
+}
