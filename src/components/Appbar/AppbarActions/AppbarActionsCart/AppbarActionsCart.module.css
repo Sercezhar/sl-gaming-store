@@ -81,10 +81,6 @@
   color: #fff;
 }
 
-/* .list {
-  margin-bottom: 30px;
-} */
-
 .cart {
   position: fixed;
   top: 0;
@@ -191,23 +187,15 @@
   cursor: pointer;
 }
 
-/* .buttonClear {
-  margin-right: 2em;
-  background-color: var(--secondary-color);
-  transition: 200ms background-color, color var(--transition);
-}
-
-.buttonClear:disabled {
-  pointer-events: none;
-}
-
-.buttonClear:hover {
-  color: #fff;
-  background-color: #202731;
-} */
-
 .buttonPurchase {
   color: #fff;
   background-color: var(--primary-color);
   box-shadow: var(--primary-bs-hover);
+}
+
+.notification {
+  padding: 40px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 600;
 }

@@ -6,7 +6,8 @@
   "cart": {
     "title": "Ваша корзина",
     "buyButton": "Придбати",
-    "total": "Всього"
+    "total": "Всього",
+    "empty": "Кошик порожній"
   },
 
   "imageSlider": {

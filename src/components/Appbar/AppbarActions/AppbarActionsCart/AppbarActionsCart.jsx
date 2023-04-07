@@ -65,69 +65,75 @@ function AppbarActionsCart({ cart, deleteFromCart, currentCurrency }) {
             <MdClose size={26} color="#fff" />
           </button>
 
-          <div>
-            <h2 className={styles.title}>{t('cart.title')}</h2>
+          <h2 className={styles.title}>{t('cart.title')}</h2>
 
-            <ul>
-              {cart.map(({ id, image, title, price, discount }, index) => (
-                <li className={styles.item} key={index}>
-                  <div className={styles.info}>
-                    <img src={image} alt={title} height="50" />
+          {cart.length > 0 ? (
+            <div>
+              <ul>
+                {cart.map(({ id, image, title, price, discount }, index) => (
+                  <li className={styles.item} key={index}>
+                    <div className={styles.info}>
+                      <img src={image} alt={title} height="50" />
 
-                    <div className={styles.details}>
-                      <span>{title}</span>
+                      <div className={styles.details}>
+                        <span>{title}</span>
 
-                      <span className={styles.price}>
-                        <span
-                          className={styles.priceDefault}
-                          style={{
-                            color: discount ? 'var(--tertiary-color)' : '#fff',
-                          }}
-                        >
-                          {handlePriceDiscount(
-                            currency(price),
-                            null,
-                            currentCurrency
-                          )}
-                        </span>
-
-                        {discount ? (
-                          <span className={styles.priceDiscount}>
+                        <span className={styles.price}>
+                          <span
+                            className={styles.priceDefault}
+                            style={{
+                              color: discount
+                                ? 'var(--tertiary-color)'
+                                : '#fff',
+                            }}
+                          >
                             {handlePriceDiscount(
                               currency(price),
-                              discount,
+                              null,
                               currentCurrency
                             )}
                           </span>
-                        ) : null}
-                      </span>
+
+                          {discount ? (
+                            <span className={styles.priceDiscount}>
+                              {handlePriceDiscount(
+                                currency(price),
+                                discount,
+                                currentCurrency
+                              )}
+                            </span>
+                          ) : null}
+                        </span>
+                      </div>
+
+                      <div className={styles.deleteWrapper}>
+                        <button
+                          type="button"
+                          className={styles.buttonDelete}
+                          onClick={() => deleteFromCart(id)}
+                        >
+                          <MdDelete size={20} color="#fff" />
+                        </button>
+                      </div>
                     </div>
 
-                    <div className={styles.deleteWrapper}>
-                      <button
-                        type="button"
-                        className={styles.buttonDelete}
-                        onClick={() => deleteFromCart(id)}
-                      >
-                        <MdDelete size={20} color="#fff" />
-                      </button>
-                    </div>
-                  </div>
+                    <Divider marginBottom="10px" />
+                  </li>
+                ))}
+              </ul>
 
-                  <Divider marginBottom="10px" />
-                </li>
-              ))}
-            </ul>
-
-            <div className={styles.checkout}>
-              <p className={styles.total}>
-                {t('cart.total')}: {handleCartTotal()}
-              </p>
-              <button className={styles.buttonPurchase} type="button">
-                {t('cart.buyButton')}
-              </button>
+              <div className={styles.checkout}>
+                <p className={styles.total}>
+                  {t('cart.total')}: {handleCartTotal()}
+                </p>
+                <button className={styles.buttonPurchase} type="button">
+                  {t('cart.buyButton')}
+                </button>
+              </div>
             </div>
-          </div>
+          ) : (
+            <p className={styles.notification}>{t('cart.empty')}</p>
+          )}
         </div>
       </div>
     </div>

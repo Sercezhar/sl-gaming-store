@@ -6,7 +6,8 @@
   "cart": {
     "title": "Your cart",
     "buyButton": "Purchase",
-    "total": "Total"
+    "total": "Total",
+    "empty": "Cart is empty"
   },
 
   "imageSlider": {
