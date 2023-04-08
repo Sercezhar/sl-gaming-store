@@ -3,6 +3,20 @@
     "placeholder": "Пошук по магазину"
   },
 
+  "userForm": {
+    "name": "Ім'я",
+    "email": "Пошта",
+    "password": "Пароль",
+    "remember": "Запам'ятати мене",
+    "remind": "Нагадати пароль",
+    "agreement": {
+      "label": "Я погоджуюсь",
+      "link": "з умовами G-Store"
+    },
+    "signIn": "Увійти",
+    "signUp": "Зареєструватися"
+  },
+
   "cart": {
     "title": "Ваша корзина",
     "buyButton": "Придбати",

@@ -8,7 +8,9 @@ import Cart from './Cart/Cart';
 import Container from './Container';
 import Footer from './Footer';
 import ImageSlider from './ImageSlider/ImageSlider';
+import Modal from './Modal/Modal';
 import Preorder from './Preorder';
+import UserIdentification from './UserIdentification/UserIdentification';
 
 function App() {
   const [currentCurrency, setCurrentCurrency] = useState(() => {
@@ -20,6 +22,9 @@ function App() {
   const [cart, setCart] = useState(() => {
     return JSON.parse(window.localStorage.getItem('cart')) ?? [];
   });
+  const [isModal, setIsModal] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(true);
+  const [isPassVisible, setIsPassVisible] = useState(false);
 
   const [t, i18n] = useTranslation('global');
 
@@ -55,8 +60,27 @@ function App() {
     setCart(prevState => prevState.filter(item => item.id !== id));
   }
 
+  function handleCloseModal() {
+    setIsModal(false);
+    setIsPassVisible(false);
+    document.body.style.overflowY = 'auto';
+  }
+
   return (
     <div className={styles.app}>
+      <Modal
+        isModal={isModal}
+        handleCloseModal={handleCloseModal}
+        title={isRegistered ? t('userForm.signIn') : t('userForm.signUp')}
+      >
+        <UserIdentification
+          isRegistered={isRegistered}
+          setIsRegistered={setIsRegistered}
+          isPassVisible={isPassVisible}
+          setIsPassVisible={setIsPassVisible}
+        />
+      </Modal>
+
       <Cart
         ref={ref}
         cart={cart}
@@ -74,6 +98,8 @@ function App() {
         cart={cart}
         isCartOpen={setIsOpen}
         deleteFromCart={deleteFromCart}
+        setIsModal={setIsModal}
+        setIsRegistered={setIsRegistered}
       />
 
       <Container>

@@ -11,6 +11,8 @@ function Appbar({
   cart,
   isCartOpen,
   deleteFromCart,
+  setIsModal,
+  setIsRegistered,
 }) {
   return (
     <header className={styles.header}>
@@ -26,6 +28,8 @@ function Appbar({
         cart={cart}
         isCartOpen={isCartOpen}
         deleteFromCart={deleteFromCart}
+        setIsModal={setIsModal}
+        setIsRegistered={setIsRegistered}
       />
     </header>
   );

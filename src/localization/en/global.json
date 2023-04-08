@@ -3,6 +3,20 @@
     "placeholder": "Search the entire store"
   },
 
+  "userForm": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember me",
+    "remind": "Remind password",
+    "agreement": {
+      "label": "I agree to the",
+      "link": "G-Store Terms"
+    },
+    "signIn": "Sign In",
+    "signUp": "Sign Up"
+  },
+
   "cart": {
     "title": "Your cart",
     "buyButton": "Purchase",

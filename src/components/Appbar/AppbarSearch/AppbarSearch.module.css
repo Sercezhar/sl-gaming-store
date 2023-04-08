@@ -5,6 +5,7 @@
 .input {
   padding: 0.75em 2em 0.75em 3em;
   width: 300px;
+  color: #fff;
   background-color: var(--secondary-color);
   border: none;
   border-radius: 25px;
@@ -13,7 +14,7 @@
 }
 
 .input:focus {
-  box-shadow: var(--searchbar-bs);
+  box-shadow: var(--input-bs);
 }
 
 .input::placeholder {

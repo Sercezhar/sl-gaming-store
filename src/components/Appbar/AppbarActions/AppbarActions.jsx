@@ -12,6 +12,8 @@ function AppbarActions({
   cart,
   isCartOpen,
   deleteFromCart,
+  setIsModal,
+  setIsRegistered,
 }) {
   return (
     <ul className={styles.list}>
@@ -42,7 +44,10 @@ function AppbarActions({
       </li>
 
       <li className={styles.item}>
-        <AppbarActionsUser />
+        <AppbarActionsUser
+          setIsModal={setIsModal}
+          setIsRegistered={setIsRegistered}
+        />
       </li>
     </ul>
   );

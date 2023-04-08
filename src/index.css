@@ -4,17 +4,18 @@
 :root {
   /* colors */
   --primary-color: #f73b3b;
-  --secondary-color: #181d25;
-  --tertiary-color: #62656b;
+  --secondary-color: #1a1f28;
+  --tertiary-color: #6c6f75;
   --text-color: #acacaf;
   --main-bg-color: #0e121b;
   --slider-control-bg: #07090d;
   --footer-bg-color: #181d25;
+  --backdrop-bg-color: rgba(255, 255, 255, 0.2);
 
   /* box-shadows */
   --primary-bs-hover: rgba(247, 59, 59, 0.2) 0px 6px 20px -5px,
     rgba(247, 59, 59, 0.1) 0px 10px 10px -5px;
-  --searchbar-bs: var(--primary-color) 0px 0px 0px 2px;
+  --input-bs: var(--primary-color) 0px 0px 0px 2px;
 
   /* transitions */
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
