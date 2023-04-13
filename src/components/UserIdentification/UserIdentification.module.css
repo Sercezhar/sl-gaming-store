@@ -139,3 +139,10 @@
 .buttonRegister:hover {
   color: var(--primary-color);
 }
+
+.error {
+  margin-top: 4px;
+  padding: 0 16px;
+  color: #fc2947;
+  font-weight: 500;
+}

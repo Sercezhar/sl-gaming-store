@@ -14,7 +14,31 @@
       "link": "G-Store Terms"
     },
     "signIn": "Sign In",
-    "signUp": "Sign Up"
+    "signUp": "Sign Up",
+    "errors": {
+      "reg": {
+        "name": "Name is a required field",
+        "email": {
+          "req": "Email is a required field",
+          "valid": "Enter a valid email"
+        },
+        "password": {
+          "req": "Password is a required field",
+          "length": "Password must be at least 6 characters"
+        },
+        "agreement": "You must accept our terms to register"
+      },
+      "auth": {
+        "email": {
+          "req": "Enter you email to log in",
+          "valid": "Enter a valid email"
+        },
+        "password": {
+          "req": "Enter you password to log in",
+          "length": "Password must be at least 6 characters"
+        }
+      }
+    }
   },
 
   "cart": {

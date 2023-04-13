@@ -1,6 +1,9 @@
 import PasswordToggler from '@/components/PasswordToggler/PasswordToggler';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { MdEmail, MdPassword } from 'react-icons/md';
+import * as yup from 'yup';
 import styles from '../UserIdentification.module.css';
 
 function UserIdentificationAuth({
@@ -10,14 +13,45 @@ function UserIdentificationAuth({
 }) {
   const [t] = useTranslation('global');
 
+  const authSchema = yup.object().shape({
+    email: yup
+      .string()
+      .email(t('userForm.errors.auth.email.valid'))
+      .required(t('userForm.errors.auth.email.req')),
+    password: yup
+      .string()
+      .required(t('userForm.errors.auth.password.req'))
+      .min(6, t('userForm.errors.auth.password.length')),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(authSchema),
+  });
+
+  function onSubmit(data) {
+    console.log(data);
+    reset();
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.row}>
         <label className={styles.label} htmlFor="email">
           <MdEmail size={20} color="#fff" />
           {t('userForm.email')}
         </label>
-        <input className={styles.input} type="text" id="email" />
+        <input
+          className={styles.input}
+          type="text"
+          id="email"
+          {...register('email')}
+        />
+        {errors.email && <p className={styles.error}>{errors.email.message}</p>}
       </div>
 
       <div className={styles.row}>
@@ -30,12 +64,16 @@ function UserIdentificationAuth({
             className={styles.input}
             type={isPassVisible ? 'text' : 'password'}
             id="password"
+            {...register('password')}
           />
           <PasswordToggler
             isPassVisible={isPassVisible}
             setIsPassVisible={setIsPassVisible}
           />
         </div>
+        {errors.password && (
+          <p className={styles.error}>{errors.password.message}</p>
+        )}
       </div>
 
       <div className={styles.rowCheck}>
