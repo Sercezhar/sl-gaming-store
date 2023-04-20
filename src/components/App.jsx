@@ -1,6 +1,8 @@
 import useClickOutside from '@/hooks/useClickOutside';
+import { getGames } from '@/services/games-api';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from 'react-query';
 import styles from './App.module.css';
 import Appbar from './Appbar/Appbar';
 import BestDeals from './BestDeals';
@@ -13,6 +15,10 @@ import Preorder from './Preorder';
 import UserIdentification from './UserIdentification/UserIdentification';
 
 function App() {
+  const { data, isLoading } = useQuery({
+    queryKey: ['games'],
+    queryFn: () => getGames(),
+  });
   const [currentCurrency, setCurrentCurrency] = useState(() => {
     return Number(window.localStorage.getItem('currency')) ?? 0;
   });
@@ -106,6 +112,7 @@ function App() {
         <ImageSlider />
 
         <Preorder
+          products={!isLoading && data[0].preorder}
           currentCurrency={currentCurrency}
           currentLanguage={currentLanguage}
           cart={cart}
@@ -113,6 +120,7 @@ function App() {
         />
 
         <BestDeals
+          products={!isLoading && data[0].discounted}
           currentCurrency={currentCurrency}
           currentLanguage={currentLanguage}
           cart={cart}

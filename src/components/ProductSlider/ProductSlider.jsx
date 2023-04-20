@@ -48,17 +48,18 @@ function ProductSlider({
             transform: `translateX(-${cardWidth() * listPosition}px)`,
           }}
         >
-          {products.map((product, index) => (
-            <ProductSliderItem
-              product={product}
-              key={index}
-              currentCurrency={currentCurrency}
-              currentLanguage={currentLanguage}
-              cart={cart}
-              addToCart={addToCart}
-              t={t}
-            />
-          ))}
+          {products &&
+            products.map((product, index) => (
+              <ProductSliderItem
+                product={product}
+                key={index}
+                currentCurrency={currentCurrency}
+                currentLanguage={currentLanguage}
+                cart={cart}
+                addToCart={addToCart}
+                t={t}
+              />
+            ))}
         </ul>
       </div>
 

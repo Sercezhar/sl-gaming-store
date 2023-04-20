@@ -10,7 +10,7 @@ function ProductSliderItemFooter({
   t,
 }) {
   const currency =
-    currentCurrency === 0 ? product.price.USD : product.price.UAH;
+    currentCurrency === 0 ? product.price.usd : product.price.uah;
 
   const isInCart = id => cart.some(item => item.id === id);
 

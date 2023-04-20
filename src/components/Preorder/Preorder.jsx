@@ -3,10 +3,15 @@ import Divider from '../Divider';
 import ProductSlider from '../ProductSlider';
 import SecondaryTitle from '../SecondaryTitle';
 import Section from '../Section';
-import products from './products';
 import { useTranslation } from 'react-i18next';
 
-function Preorder({ currentCurrency, currentLanguage, cart, addToCart }) {
+function Preorder({
+  products,
+  currentCurrency,
+  currentLanguage,
+  cart,
+  addToCart,
+}) {
   const [t] = useTranslation('global');
 
   return (
