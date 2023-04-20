@@ -12,7 +12,7 @@ function handlePriceDiscount(price, discount, currency) {
       : `${discountedPriceFixed}₴`;
   }
 
-  return currency === 0 ? `$${price?.toFixed(2)}` : `${price}₴`;
+  return currency === 0 ? `$${price.toFixed(2)}` : `${price}₴`;
 }
 
 export default handlePriceDiscount;

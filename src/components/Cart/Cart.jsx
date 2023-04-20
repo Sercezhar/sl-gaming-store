@@ -14,7 +14,7 @@ function Cart(
 ) {
   const [t] = useTranslation('global');
 
-  const currentPrice = price => (currentCurrency === 0 ? price.USD : price.UAH);
+  const currentPrice = price => (currentCurrency === 0 ? price.usd : price.uah);
 
   let cartClasses = cx({
     cart: true,
